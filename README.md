@@ -1,7 +1,9 @@
 # PostgresAsyncListener
 
+Small demonstration of using a python process to listen on changes on PostgresSQL tables
+
 ## To Run
-Run `./init_test_db` to set a test database with tables
+Run `./init_test_db` to create a test database with tables
 
 Run `python async_listener.py` to run the listener process
 
