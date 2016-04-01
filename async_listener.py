@@ -46,6 +46,7 @@ if __name__ == '__main__':
     channels = sys.argv[1:]
     print 'initializing async listener'
     listener = AsyncListner(dsn)
+    listener.addNotify('channel')
     for channel in channels:
         print 'subscribing to', channel
         listener.addNotify(channel)
