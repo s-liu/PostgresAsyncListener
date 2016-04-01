@@ -1,5 +1,5 @@
 #!/bin/sh
-dbname="mytestdb"
+dbname='mytestdb'
 channel='channel'
 
 dropdb $dbname
