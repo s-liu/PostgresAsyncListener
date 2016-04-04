@@ -23,7 +23,7 @@ BEGIN
   	ELSE
     	row = OLD;
   	END IF;
-	PERFORM pg_notify('$channel', json_build_object('table', TG_TABLE_NAME, 'id', row.id, 'type', TG_OP, 'row', row_to_json(row))::text);
+	PERFORM pg_notify('$channel', json_build_object('table', TG_TABLE_NAME, 'type', TG_OP, 'row', row_to_json(row))::text);
 	return NEW;
 END;
 \$notify_trigger\$ LANGUAGE plpgsql;

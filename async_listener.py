@@ -27,11 +27,11 @@ class AsyncListner():
                     self.gotNotify(notify)
 
     def addNotify(self, channel):
-        sql = "LISTEN %s" % channel 
+        sql = "LISTEN %s" % channel
         self.curs.execute(sql)
 
     def removeNotify(self, channel):
-        sql = "UNLISTEN %s" % channel 
+        sql = "UNLISTEN %s" % channel
         self.curs.execute(sql)
 
     def run(self):
